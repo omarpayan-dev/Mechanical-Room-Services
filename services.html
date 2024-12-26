@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <style>
     header {
-      background: url('https://source.unsplash.com/1600x900/?industrial,maintenance') no-repeat center center/cover;
+      background: url('https://source.unsplash.com/1600x900/?industrial,boiler') no-repeat center center/cover;
       color: white;
       text-align: center;
       padding: 4rem 1rem;
@@ -16,6 +16,11 @@
     header h1 {
       font-size: 3rem;
       text-shadow: 2px 2px 5px black;
+    }
+    nav {
+      background-color: #001f3f;
+      color: white;
+      padding: 1rem;
     }
     nav ul {
       display: flex;
@@ -27,17 +32,25 @@
       margin: 0 1rem;
     }
     nav ul li a {
-      color: #001f3f;
+      color: white;
       text-decoration: none;
     }
     section {
       padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
     }
     footer {
       background: #001f3f;
       color: white;
       text-align: center;
       padding: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -54,7 +67,7 @@
 
   <!-- Header -->
   <header>
-    <h1>My Services</h1>
+    <h1>Services</h1>
   </header>
 
   <!-- Services Section -->
@@ -63,9 +76,9 @@
     <ul>
       <li><strong>Boiler Services:</strong> Comprehensive troubleshooting, maintenance, and replacements.</li>
       <li><strong>Chiller Services:</strong> Installations, repairs, and energy-efficient upgrades.</li>
-      <li><strong>Cooling Towers:</strong> Inspections, repairs, and system optimization.</li>
-      <li><strong>Hydronic Loops:</strong> Custom solutions for efficient heating and cooling.</li>
     </ul>
+    <img src="https://source.unsplash.com/1200x800/?boiler-room" alt="Boiler room">
+    <img src="https://source.unsplash.com/1200x800/?chiller" alt="Chiller equipment">
   </section>
 
   <!-- Footer -->
