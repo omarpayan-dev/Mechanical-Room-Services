@@ -8,26 +8,41 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <style>
     header {
-      background: linear-gradient(135deg, #001f3f, #0074d9);
+      background: url('https://source.unsplash.com/1600x900/?mechanical-room,engineering') no-repeat center center/cover;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 4rem 1rem;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px black;
     }
-    main {
-      padding: 2rem 1rem;
+    nav {
+      background-color: #001f3f;
+      color: white;
+      padding: 1rem;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
     }
     section {
-      margin-bottom: 2rem;
+      padding: 2rem 1rem;
     }
     footer {
       background: #001f3f;
       color: white;
       text-align: center;
-      padding: 1rem 0;
-      margin-top: 2rem;
+      padding: 1rem;
     }
     footer a {
       color: #ffffff;
@@ -37,29 +52,31 @@
 </head>
 
 <body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+    </ul>
+  </nav>
+
   <!-- Header -->
   <header>
     <h1>Mechanical Room Services by Omar</h1>
-    <p>Your Trusted Partner for Boilers, Chillers, and Cooling Towers</p>
+    <p>Committed to Excellence in Boilers, Chillers, and Cooling Towers</p>
   </header>
 
-  <!-- Main Content -->
-  <main class="container">
-    <section>
-      <h2>Welcome</h2>
-      <p>With over 12 years of experience, Omar brings unparalleled expertise in boilers, chillers, cooling towers, and mechanical room solutions. Let’s work together to make your systems run efficiently.</p>
-    </section>
-    <section>
-      <h2>Explore Our Services</h2>
-      <p>Learn more about how we can help with boilers, chillers, cooling towers, and more.</p>
-      <button onclick="location.href='services.html'">View Services</button>
-    </section>
-  </main>
+  <!-- Welcome Section -->
+  <section>
+    <h2>Welcome to My Mechanical Services</h2>
+    <p>Hello, I’m Omar, and I specialize in mechanical room solutions that are reliable, efficient, and tailored to your needs. With over 12 years of hands-on experience, I’ve worked on boilers, chillers, cooling towers, and complex mechanical systems across Central Texas. Whether it’s optimizing an aging system, emergency repairs, or designing a state-of-the-art mechanical room, I’m here to help you keep things running smoothly.</p>
+    <p>When you work with me, you’re not just hiring a contractor – you’re gaining a partner dedicated to your success. I take pride in my precision, professionalism, and commitment to exceeding expectations. Let’s make your systems more efficient and worry-free.</p>
+  </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Mechanical Room Services by Omar</p>
-    <p><a href="about.html">About</a> • <a href="services.html">Services</a> • <a href="contact.html">Contact</a></p>
   </footer>
 </body>
 
