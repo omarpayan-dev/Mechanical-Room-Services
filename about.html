@@ -4,14 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mechanical Room Services by Omar</title>
+  <title>About Me - Mechanical Room Services by Omar</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
     header {
-      background: url('https://source.unsplash.com/1600x900/?mechanical-room') no-repeat center center/cover;
+      background: url('https://source.unsplash.com/1600x900/?engineer,mechanic') no-repeat center center/cover;
       color: white;
       text-align: center;
       padding: 4rem 1rem;
@@ -20,14 +17,21 @@
       font-size: 3rem;
       text-shadow: 2px 2px 5px black;
     }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: #001f3f;
+      text-decoration: none;
+    }
     section {
       padding: 2rem 1rem;
-      text-align: center;
-    }
-    .services {
-      background: url('https://source.unsplash.com/1600x900/?industrial') no-repeat center center/cover;
-      color: white;
-      padding: 3rem 1rem;
     }
     footer {
       background: #001f3f;
@@ -35,52 +39,36 @@
       text-align: center;
       padding: 1rem;
     }
-    footer a {
-      color: #ffffff;
-      text-decoration: none;
-    }
   </style>
 </head>
 
 <body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+    </ul>
+  </nav>
+
   <!-- Header -->
   <header>
-    <h1>Mechanical Room Services by Omar</h1>
-    <p>Your Trusted Partner for Boilers, Chillers, and Cooling Towers</p>
+    <h1>About Me</h1>
   </header>
 
   <!-- About Section -->
   <section>
-    <h2>About Us</h2>
-    <p>With over 12 years of experience, we specialize in providing mechanical solutions tailored to your needs. Trust us for reliable and efficient services.</p>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Boiler Maintenance and Repairs</li>
-      <li>Chiller Optimization and Upgrades</li>
-      <li>Cooling Tower Inspections and Repairs</li>
-      <li>Custom Mechanical Room Designs</li>
-    </ul>
-  </section>
-
-  <!-- Contact Section -->
-  <section>
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/{your_form_id}" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <h2>Hi, I'm Omar</h2>
+    <p>I started my career in the U.S. Air Force, where I developed the discipline, technical expertise, and dedication that now drive my business. For over 12 years, I’ve been honing my skills as a mechanical professional, working on everything from massive commercial boilers to advanced chiller systems and hydronic loops.</p>
+    <p>When I transitioned into private industry, I brought with me a passion for solving complex problems and a deep understanding of mechanical systems. My clients range from schools and hospitals to industrial plants and government facilities, all with unique challenges that require tailored solutions. I approach each project as a partnership, collaborating with you to deliver long-lasting results.</p>
+    <h3>Why I Do This Work</h3>
+    <p>I believe that reliable mechanical systems are the backbone of every successful operation. When your boilers, chillers, and cooling towers work seamlessly, your business or facility can focus on what matters most. My goal is to take the stress out of system management, ensuring everything runs like clockwork.</p>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Mechanical Room Services by Omar</p>
-    <p><a href="about.html">About</a> • <a href="services.html">Services</a> • <a href="contact.html">Contact</a></p>
   </footer>
 </body>
 
