@@ -1,128 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Expert HVAC and plumbing solutions for commercial customers in Central Texas by Omar, with over 12 years of experience.">
-  <meta name="keywords" content="commercial HVAC, commercial plumbing, HVAC repair, plumbing solutions, Central Texas">
-  <title>HVAC and Plumbing Services by Omar</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Light commercial HVAC and plumbing services in Central Texas. Omar helps customers get preventative maintenance, repairs, and replacements for HVAC and plumbing equipment." />
+  <meta name="keywords" content="light commercial HVAC, plumbing services, Central Texas, rooftop units, water heaters, medgas, boilers, chillers" />
+  <title>HVAC & Plumbing — Omar Payan</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
+    body { font-family: 'Inter', sans-serif; line-height: 1.7; color: #0f172a; }
+
+    /* Header */
     header {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/two-boilers-in-mechanical-room.jpg') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 6rem 1rem;
-      min-height: 50vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('images/rooftop-units-on-roof.jpg') center/cover no-repeat;
+      color: #fff; text-align: center; padding: 6rem 1rem; min-height: 50vh;
+      display: flex; flex-direction: column; justify-content: center;
     }
-    header h1 {
-      font-size: 3.5rem;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-      margin-bottom: 1rem;
-    }
-    nav {
-      background-color: #001f3f;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 1rem 0;
-      margin: 0;
-    }
-    nav ul li {
-      margin: 0 1.5rem;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #60a5fa;
-    }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-    }
-    .contact-cta {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .contact-cta button {
-      background-color: #001f3f;
-      color: white;
-      padding: 0.75rem 2rem;
-      border: none;
-      border-radius: 0.5rem;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .contact-cta button:hover {
-      background-color: #1e40af;
-    }
-    .contact-form {
-      background-color: #f9fafb;
-      padding: 2rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin-top: 2rem;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      margin-bottom: 1rem;
-      border-radius: 0.25rem;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin: 1rem 0;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    footer {
-      background: #001f3f;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-    footer p {
-      color: white;
-    }
-    .fade-in {
-      animation: fadeIn 1s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    header h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 2px 2px 8px rgba(0,0,0,.8); color: #fff; }
+    header p { font-size: 1.1rem; color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,.7); }
+
+    /* Nav */
+    nav { background-color: #001f3f; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 4px rgba(0,0,0,.1); }
+    nav ul { display: flex; justify-content: center; list-style: none; padding: 1rem 0; margin: 0; }
+    nav li { margin: 0 1.5rem; }
+    nav a { color: #fff; text-decoration: none; font-weight: 600; transition: color .3s ease; }
+    nav a:hover, nav a[aria-current="page"] { color: #60a5fa; }
+
+    /* Sections */
+    section { max-width: 900px; margin: 2rem auto; padding: 2rem; }
+    section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
+    section p { margin-bottom: 1rem; }
+
+    /* Bullets + sub-bullets (kept for consistency if needed later) */
+    ul { margin: 1rem 0 1rem 1.5rem; }
+    ul li { margin-bottom: .5rem; }
+    ul ul { margin-top: .5rem; margin-left: 1.5rem; list-style-type: circle; }
+    ul ul li { margin-bottom: .3rem; }
+
+    /* Images */
+    img { max-width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0,0,0,.1); }
+
+    /* Markets Served strip */
+    .markets { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; }
+    .markets h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: .75rem; }
+    .market-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .market-tag { background: #e5e7eb; border-radius: 9999px; padding: .35rem .75rem; font-size: .95rem; }
+
+    /* CTA */
+    .contact-cta { text-align: center; margin: 2rem 0; }
+    .contact-cta button { background-color: #001f3f; color: #fff; padding: .75rem 2rem; border: none; border-radius: .5rem; font-size: 1.1rem; cursor: pointer; transition: background-color .3s ease; }
+    .contact-cta button:hover { background-color: #1e40af; }
+
+    /* Contact form */
+    .contact-form { background-color: #f9fafb; padding: 2rem; border-radius: .5rem; box-shadow: 0 4px 6px rgba(0,0,0,.1); margin-top: 2rem; }
+    .contact-form h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
+    .contact-form input, .contact-form textarea { width: 100%; margin-bottom: 1rem; border-radius: .25rem; }
+
+    /* Footer */
+    footer { background: #001f3f; color: #fff; text-align: center; padding: 2rem; margin-top: 2rem; }
+    footer p { color: #fff; margin: .5rem 0; }
+
+    /* Small screens */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-      nav ul {
-        flex-direction: column;
-        text-align: center;
-      }
-      nav ul li {
-        margin: 0.5rem 0;
-      }
+      header h1 { font-size: 2.5rem; }
+      nav ul { flex-direction: column; text-align: center; }
+      nav li { margin: .5rem 0; }
     }
   </style>
 </head>
@@ -130,7 +73,7 @@
   <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
     </ul>
@@ -138,43 +81,103 @@
 
   <!-- Header -->
   <header>
-    <h1 class="fade-in">HVAC and Plumbing Services by Omar</h1>
-    <p class="fade-in">Expert HVAC and Plumbing Solutions for Commercial Customers Across Central Texas</p>
+    <h1>Light Commercial HVAC & Plumbing</h1>
+    <p>Reliable Solutions for Businesses, Schools, and Facilities</p>
   </header>
 
-  <!-- Welcome Section -->
-  <section class="fade-in">
-    <h2>Welcome</h2>
-    <p>Hello! I’m Omar, and I specialize in providing top-tier HVAC and plumbing solutions for commercial customers, from light commercial to large-scale businesses, schools, and facilities across Central Texas. With over 12 years of hands-on experience, I’ve tackled countless projects, from repairing failing systems to installing state-of-the-art equipment. My goal is to keep your mechanical rooms running efficiently and reliably.</p>
-    <p>When you work with me, you get a partner who understands the critical role that HVAC and plumbing play in your operations. Let’s work together to create efficient, trouble-free systems that meet your needs today and in the future.</p>
+  <!-- Intro -->
+  <section>
+    <h2><strong>How Customers Are Supported</strong></h2>
+    <p>With over 12 years in HVAC and plumbing service sales across Central Texas—covering schools, military sites, multifamily, and healthcare—customers rely on Omar Payan to simplify the process and get results. Support focuses on arranging the right services at the right time: preventative maintenance to avoid downtime, responsive repairs when problems arise, and managed replacements when equipment reaches end‑of‑life.</p>
+  </section>
+
+  <!-- Services at a glance -->
+  <section>
+    <h2><strong>Services at a Glance</strong></h2>
+    <ul>
+      <li><strong>Rooftop Units (RTUs)</strong>
+        <ul>
+          <li>Preventative maintenance coordinated for peak performance</li>
+          <li>Repairs scheduled quickly to minimize disruption</li>
+          <li>Replacements managed end‑to‑end, including crane lifts and controls integration</li>
+        </ul>
+      </li>
+      <li><strong>Commercial Water Heaters</strong>
+        <ul>
+          <li>Routine inspections and maintenance for safe, reliable hot water</li>
+          <li>Repairs arranged with proper parts and fittings</li>
+          <li>Replacements guided for efficiency and code compliance (pumps, neutralizers, venting)</li>
+        </ul>
+      </li>
+      <li><strong>Plumbing & MedGas</strong>
+        <ul>
+          <li>Preventative checks including drain/sewer inspections</li>
+          <li>Emergency repairs coordinated for fast response</li>
+          <li>MedGas work delivered with certified installers/inspectors to NFPA standards</li>
+        </ul>
+      </li>
+      <li><strong>Boilers</strong>
+        <ul>
+          <li>Scheduled maintenance for safety and efficiency</li>
+          <li>Repairs coordinated to restore service quickly</li>
+          <li>Replacements planned for redundancy and modern efficiency</li>
+        </ul>
+      </li>
+      <li><strong>Chillers</strong>
+        <ul>
+          <li>PM programs including coil cleaning, refrigerant checks, and pump inspections</li>
+          <li>Diagnostics and repairs arranged promptly</li>
+          <li>Replacements managed from selection through installation</li>
+        </ul>
+      </li>
+    </ul>
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <img src="images/rooftop-units-on-roof.jpg" alt="Commercial rooftop HVAC units" loading="lazy">
-      <img src="images/medgas-lines-and-gauges.jpg" alt="Commercial medical gas lines and gauges" loading="lazy">
+      <img src="images/rooftop-units-on-roof.jpg" alt="Commercial rooftop HVAC units" loading="lazy" />
+      <img src="images/medgas-lines-and-gauges.jpg" alt="Medical gas lines and gauges" loading="lazy" />
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact-form fade-in">
-    <h2>Contact Me</h2>
-    <p>Ready to get your commercial HVAC or plumbing systems running smoothly? Reach out today!</p>
+  <!-- Markets Served -->
+  <section>
+    <div class="markets">
+      <h3><strong>Markets Served</strong></h3>
+      <div class="market-tags">
+        <span class="market-tag">Schools</span>
+        <span class="market-tag">Military</span>
+        <span class="market-tag">Multifamily</span>
+        <span class="market-tag">Healthcare</span>
+        <span class="market-tag">Worship</span>
+        <span class="market-tag">Commercial Offices</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-form">
+    <h2><strong>Get in Touch</strong></h2>
+    <p>For scheduling maintenance, coordinating repairs, or planning replacements, reach out below and support will be arranged promptly.</p>
+
     <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <!-- Call to Action -->
-  <div class="contact-cta fade-in">
-    <button onclick="window.scrollTo({top: document.querySelector('.contact-form').offsetTop, behavior: 'smooth'})">
+  <!-- CTA Button -->
+  <div class="contact-cta">
+    <button onclick="window.scrollTo({ top: document.querySelector('.contact-form').offsetTop, behavior: 'smooth' })">
       Get a Free Consultation
     </button>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer with contact info -->
   <footer>
-    <p>&copy; 2025 HVAC and Plumbing Services by Omar. All rights reserved.</p>
+    <p>&copy; 2025 HVAC & Plumbing Services by Omar. All rights reserved.</p>
+    <p><strong>Cell:</strong> <a href="tel:12108757276" style="color:#fff;">(210) 875-7276</a></p>
+    <p><strong>Email:</strong> <a href="mailto:omar.payan.tx@gmail.com" style="color:#fff;">omar.payan.tx@gmail.com</a></p>
   </footer>
 </body>
 </html>
