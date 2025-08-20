@@ -1,202 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Light commercial HVAC and plumbing services for Central Texas. Reliable installations, repairs, and maintenance for businesses, schools, and facilities.">
-  <meta name="keywords" content="light commercial HVAC, plumbing services, Central Texas, rooftop units, water heaters, medgas, boilers, chillers">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Light commercial HVAC and plumbing services in Central Texas. Omar helps customers get preventative maintenance, repairs, and replacements for HVAC and plumbing equipment." />
+  <meta name="keywords" content="light commercial HVAC, plumbing services, Central Texas, rooftop units, water heaters, medgas, boilers, chillers" />
   <title>Services - Light Commercial HVAC and Plumbing</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
-    body { font-family: 'Inter', sans-serif; line-height: 1.6; }
-
+    body { font-family: 'Inter', sans-serif; line-height: 1.7; color: #0f172a; }
     header {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/rooftop-units-on-roof.jpg') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 6rem 1rem;
-      min-height: 50vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('images/rooftop-units-on-roof.jpg') center/cover no-repeat;
+      color: #fff; text-align: center; padding: 6rem 1rem; min-height: 50vh; display: flex; flex-direction: column; justify-content: center;
     }
-    header h1 { font-size: 3.5rem; font-weight: 700; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); margin-bottom: 1rem; }
-
-    nav { background-color: #001f3f; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
-    nav ul { display: flex; justify-content: center; list-style: none; padding: 1rem 0; margin: 0; }
-    nav ul li { margin: 0 1.5rem; }
-    nav ul li a { color: white; text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
-    nav ul li a:hover { color: #60a5fa; }
+    header h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 2px 2px 8px rgba(0,0,0,.8); color: #fff; }
+    header p { font-size: 1.25rem; color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,.7); }
 
     section { max-width: 900px; margin: 2rem auto; padding: 2rem; }
     section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
     section p { margin-bottom: 1rem; }
 
     ul { margin: 1rem 0 1rem 1.5rem; }
-    ul li { margin-bottom: 0.5rem; }
-    ul ul { margin-top: 0.5rem; margin-left: 1.5rem; list-style-type: circle; }
-    ul ul li { margin-bottom: 0.3rem; }
+    ul li { margin-bottom: .5rem; }
+    ul ul { margin-top: .5rem; margin-left: 1.5rem; list-style-type: circle; }
+    ul ul li { margin-bottom: .3rem; }
 
-    .contact-cta { text-align: center; margin: 2rem 0; }
-    .contact-cta button { background-color: #001f3f; color: white; padding: 0.75rem 2rem; border: none; border-radius: 0.5rem; font-size: 1.1rem; cursor: pointer; transition: background-color 0.3s ease; }
-    .contact-cta button:hover { background-color: #1e40af; }
+    img { max-width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0,0,0,.1); }
 
-    .contact-form { background-color: #f9fafb; padding: 2rem; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-top: 2rem; }
-    .contact-form h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
-    .contact-form input, .contact-form textarea { width: 100%; margin-bottom: 1rem; border-radius: 0.25rem; }
-
-    img { max-width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
-
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0; }
-    .gallery h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
-    .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-    .gallery figure { margin: 0; text-align: center; }
-    .gallery figcaption { font-size: 0.9rem; color: #4b5563; margin-top: 0.5rem; }
-
-    footer { background: #001f3f; color: white; text-align: center; padding: 2rem; margin-top: 2rem; }
-    footer p { color: white; }
-
-    .fade-in { animation: fadeIn 1s ease-in; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.5rem; }
-      nav ul { flex-direction: column; text-align: center; }
-      nav ul li { margin: 0.5rem 0; }
-      .gallery { grid-template-columns: 1fr; }
-    }
+    footer { background: #001f3f; color: #fff; text-align: center; padding: 2rem; margin-top: 2rem; }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-    </ul>
-  </nav>
-
   <!-- Header -->
   <header>
-    <h1 class="fade-in">Light Commercial HVAC & Plumbing</h1>
-    <p class="fade-in">Reliable Solutions for Businesses, Schools, and Facilities</p>
+    <h1><strong>Light Commercial HVAC & Plumbing</strong></h1>
+    <p>Reliable Solutions for Businesses, Schools, and Facilities</p>
   </header>
 
   <!-- Intro -->
-  <section class="fade-in">
-    <h2>Comprehensive Light Commercial Services</h2>
-    <p>We specialize in keeping light commercial HVAC and plumbing systems running at peak performance. From offices and schools to medical facilities and retail spaces, we deliver practical solutions tailored to your needs.</p>
-    <p>Our focus is on minimizing downtime, maximizing efficiency, and ensuring long-term reliability so your operations never miss a beat.</p>
+  <section>
+    <h2><strong>How Customers Are Supported</strong></h2>
+
+    <p>Commercial facilities depend on HVAC and plumbing systems that are reliable, efficient, and safe. Support is provided by arranging the right services at the right time—whether that’s preventative maintenance to avoid downtime, timely repairs when problems arise, or complete replacements when equipment reaches the end of its life. The goal is to make the process simple and ensure each customer gets dependable solutions without the stress of managing it alone.</p>
   </section>
 
-  <!-- HVAC Services -->
-  <section class="service-section fade-in">
-    <h2>HVAC Services</h2>
-    <ul>
-      <li>Rooftop Unit (RTU) Installation, Repair & Maintenance</li>
-      <li>Mini Splits & Package Units</li>
-      <li>Preventative Maintenance Programs
-        <ul>
-          <li>Quarterly PMs</li>
-          <li>Annual Inspections</li>
-        </ul>
-      </li>
-      <li>Energy-Efficiency Upgrades</li>
-    </ul>
-    <img src="images/rooftop-units-on-roof.jpg" alt="Rooftop HVAC units">
+  <!-- Rooftop Units -->
+  <section>
+    <h2><strong>Rooftop Units (RTUs)</strong></h2>
+    <p>Preventative maintenance programs are coordinated to keep RTUs operating at peak performance. If issues are found, repair services are scheduled quickly to minimize disruption. When replacement is needed, the project is managed end-to-end, including crane lifts and controls integration, so facilities stay comfortable and fully operational.</p>
+    <img src="images/rooftop-units-on-roof.jpg" alt="Rooftop HVAC units" />
   </section>
 
-  <!-- Plumbing Services -->
-  <section class="service-section fade-in">
-    <h2>Plumbing Services</h2>
-    <ul>
-      <li>Commercial Water Heater Installation & Repair
-        <ul>
-          <li>Tank and Tankless Systems</li>
-          <li>Preventative Maintenance</li>
-        </ul>
-      </li>
-      <li>Medical Gas (MedGas) Piping & Compliance</li>
-      <li>Drain & Sewer Services</li>
-      <li>Preventative Maintenance & Emergency Repairs</li>
-    </ul>
-    <img src="images/three-water-heaters.jpg" alt="Commercial water heaters">
+  <!-- Water Heaters -->
+  <section>
+    <h2><strong>Commercial Water Heaters</strong></h2>
+    <p>Routine inspections and maintenance help extend the life of water heaters and keep hot water available when needed. Should repairs be required, the right technicians are dispatched with proper parts and fittings. For replacements, guidance is provided on options that balance efficiency and cost, along with coordination of pumps, neutralizers, and venting for a safe, code-compliant system.</p>
+    <img src="images/three-water-heaters.jpg" alt="Commercial water heaters" />
   </section>
 
-  <!-- Specialty Systems -->
-  <section class="service-section fade-in">
-    <h2>Specialty Systems</h2>
-    <p>In addition to light commercial HVAC and plumbing, we provide expertise with larger systems including:</p>
-    <ul>
-      <li>Boilers
-        <ul>
-          <li>Service, Repair & Replacement</li>
-          <li>Energy-Efficient Upgrades</li>
-        </ul>
-      </li>
-      <li>Chillers
-        <ul>
-          <li>Diagnostics, Repairs & Installation</li>
-          <li>Preventative Maintenance Plans</li>
-        </ul>
-      </li>
-      <li>Large Water Heater Systems</li>
-      <li>Integrated Rooftop Units with MedGas</li>
-    </ul>
-    <img src="images/two-boilers-in-mechanical-room.jpg" alt="Boilers in mechanical room">
+  <!-- Plumbing and MedGas -->
+  <section>
+    <h2><strong>Plumbing and MedGas Services</strong></h2>
+    <p>Preventative plumbing checks, including drain and sewer inspections, reduce unexpected failures. Emergency repair response is arranged quickly when needed. For MedGas systems, certified installers and inspectors are brought in, ensuring compliance with NFPA standards and delivering safe tie-ins and upgrades for healthcare facilities.</p>
+    <img src="images/medgas-lines-and-gauges.jpg" alt="Medical gas lines" />
   </section>
 
-  <!-- Gallery -->
-  <section class="gallery fade-in">
-    <h2>Project Highlights</h2>
-    <div class="gallery">
-      <figure>
-        <img src="images/rooftop-units-on-roof.jpg" alt="Commercial rooftop HVAC units">
-        <figcaption>Rooftop HVAC Units</figcaption>
-      </figure>
-      <figure>
-        <img src="images/three-water-heaters.jpg" alt="Commercial water heaters">
-        <figcaption>Commercial Water Heaters</figcaption>
-      </figure>
-      <figure>
-        <img src="images/medgas-lines-and-gauges.jpg" alt="Medical gas lines">
-        <figcaption>Medical Gas Lines</figcaption>
-      </figure>
-      <figure>
-        <img src="images/two-boilers-in-mechanical-room.jpg" alt="Commercial boilers">
-        <figcaption>Boilers in Mechanical Room</figcaption>
-      </figure>
-      <figure>
-        <img src="images/chillers-in-mechanical-room.jpg" alt="Chillers in mechanical room">
-        <figcaption>Chillers in Mechanical Room</figcaption>
-      </figure>
-    </div>
+  <!-- Boilers -->
+  <section>
+    <h2><strong>Boilers</strong></h2>
+    <p>Scheduled maintenance keeps boiler systems safe and efficient. When problems occur, repair crews are coordinated to restore service quickly. Replacement projects are guided with attention to redundancy, efficiency upgrades, and safe code-compliant installations tailored to each facility’s needs.</p>
+  </section>
+
+  <!-- Chillers -->
+  <section>
+    <h2><strong>Chillers</strong></h2>
+    <p>Preventative maintenance programs include coil cleaning, refrigerant checks, and pump inspections to keep chillers ready for Texas heat. When issues arise, diagnostics and repairs are arranged promptly. Replacement projects are managed carefully, from equipment selection to installation, ensuring chilled water systems remain dependable long-term.</p>
+    <img src="images/chillers-in-mechanical-room.jpg" alt="Chillers in mechanical room" />
   </section>
 
   <!-- Contact -->
-  <section class="contact-form fade-in">
-    <h2>Contact Us</h2>
-    <p>Ready to get your HVAC or plumbing systems serviced? Let’s talk.</p>
+  <section>
+    <h2><strong>Get in Touch</strong></h2>
+    <p>Customers can count on direct support for HVAC and plumbing needs—whether that’s scheduling maintenance, coordinating repairs, or planning replacements. The focus is on making it simple and reliable to get the right services in place.</p>
     <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <!-- Call to Action -->
-  <div class="contact-cta fade-in">
-    <button onclick="window.scrollTo({top: document.querySelector('.contact-form').offsetTop, behavior: 'smooth'})">
-      Get a Free Consultation
-    </button>
-  </div>
-
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Light Commercial HVAC & Plumbing by Omar. All rights reserved.</p>
+    <p>&copy; 2025 HVAC & Plumbing Services by Omar. All rights reserved.</p>
   </footer>
 </body>
 </html>
