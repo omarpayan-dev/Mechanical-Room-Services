@@ -1,60 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Services - Mechanical Room Services by Omar</title>
+  <meta name="description" content="Expert HVAC and plumbing services for commercial customers in Central Texas by Omar, specializing in boilers, chillers, and more.">
+  <meta name="keywords" content="commercial HVAC, commercial plumbing, boiler services, chiller services, Central Texas">
+  <title>Services - HVAC and Plumbing Services by Omar</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
     header {
-      background: url('https://source.unsplash.com/1600x900/?industrial,boiler') no-repeat center center/cover;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/two-boilers-in-mechanical-room.jpg') no-repeat center center/cover;
       color: white;
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 6rem 1rem;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     header h1 {
-      font-size: 3rem;
-      text-shadow: 2px 2px 5px black;
+      font-size: 3.5rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+      margin-bottom: 1rem;
     }
     nav {
       background-color: #001f3f;
-      color: white;
-      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     nav ul {
       display: flex;
       justify-content: center;
       list-style: none;
-      padding: 0;
+      padding: 1rem 0;
+      margin: 0;
     }
     nav ul li {
-      margin: 0 1rem;
+      margin: 0 1.5rem;
     }
     nav ul li a {
       color: white;
       text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #60a5fa;
     }
     section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+    }
+    .contact-cta {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .contact-cta button {
+      background-color: #001f3f;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .contact-cta button:hover {
+      background-color: #1e40af;
+    }
+    .contact-form {
+      background-color: #f9fafb;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 0.25rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .gallery figure {
+      margin: 0;
+      text-align: center;
+    }
+    .gallery figcaption {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-top: 0.5rem;
     }
     footer {
       background: #001f3f;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 2rem;
+      margin-top: 2rem;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-      border-radius: 8px;
+    footer p {
+      color: white;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul li {
+        margin: 0.5rem 0;
+      }
+      .gallery {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
-
 <body>
   <!-- Navigation -->
   <nav>
@@ -67,19 +162,19 @@
 
   <!-- Header -->
   <header>
-    <h1>Boilers and Chillers</h1>
-    <p>Expert Service for Commercial and Industrial Needs</p>
+    <h1 class="fade-in">HVAC and Plumbing Services</h1>
+    <p class="fade-in">Expert Solutions for Commercial and Industrial Needs</p>
   </header>
 
   <!-- Introduction Section -->
-  <section>
-    <h2>Comprehensive Boiler and Chiller Solutions</h2>
-    <p>At Mechanical Room Services by Omar, I provide reliable and efficient solutions for boilers and chillers. Whether your system needs routine maintenance, emergency repairs, or a full installation, I have the expertise to get the job done right. With over 12 years of experience, I understand the critical role these systems play in your facility’s operation.</p>
-    <p>My services are tailored to meet your unique requirements, ensuring optimal performance, energy efficiency, and long-term reliability. From small repairs to large-scale installations, I am committed to delivering exceptional results every time.</p>
+  <section class="fade-in">
+    <h2>Comprehensive HVAC and Plumbing Solutions</h2>
+    <p>At HVAC and Plumbing Services by Omar, I provide reliable and efficient solutions for commercial HVAC and plumbing systems. Whether your system needs routine maintenance, emergency repairs, or a full installation, I have the expertise to get the job done right. With over 12 years of experience, I understand the critical role these systems play in your facility’s operation.</p>
+    <p>My services are tailored to meet your unique requirements, ensuring optimal performance, energy efficiency, and long-term reliability. From small repairs to large-scale installations for businesses, schools, and facilities, I am committed to delivering exceptional results every time.</p>
   </section>
 
   <!-- Boiler Services Section -->
-  <section class="service-section">
+  <section class="service-section fade-in">
     <h2>Boiler Services</h2>
     <p>I specialize in comprehensive boiler solutions, including:</p>
     <ul>
@@ -88,12 +183,12 @@
       <li>Boiler Replacements and Installations</li>
       <li>Energy-Efficient Upgrades</li>
     </ul>
-    <img src="https://www.allianceairandplumbing.com/heating-system.jpg" alt="Commercial Boiler">
+    <img src="images/two-boilers-in-mechanical-room.jpg" alt="Commercial boilers in a mechanical room" loading="lazy">
     <p>Regular maintenance and timely repairs are key to avoiding costly downtime. Trust me to keep your boiler systems running smoothly and efficiently.</p>
   </section>
 
   <!-- Chiller Services Section -->
-  <section class="service-section">
+  <section class="service-section fade-in">
     <h2>Chiller Services</h2>
     <p>My chiller services are designed to ensure maximum efficiency and performance. I offer:</p>
     <ul>
@@ -102,22 +197,68 @@
       <li>Energy-Efficiency Optimization</li>
       <li>Preventative Maintenance Plans</li>
     </ul>
-    <img src="https://source.unsplash.com/1200x800/?chiller" alt="Chiller System">
+    <img src="images/chillers-in-mechanical-room.jpg" alt="Commercial chillers in a mechanical room" loading="lazy">
     <p>Whether your chiller system needs repairs or you’re planning a new installation, I bring the expertise to deliver reliable and efficient solutions.</p>
   </section>
 
-  <!-- Call-to-Action Section -->
-  <section class="cta">
-    <h2>Contact Me Today</h2>
-    <p>Ready to ensure your boilers and chillers operate at peak performance? Reach out now to schedule a consultation or request a service call.</p>
-    <button onclick="location.href='tel:+1234567890'">Call Now</button>
-    <button onclick="location.href='mailto:omar.payan.tx@gmail.com'">Email Me</button>
+  <!-- Gallery Section -->
+  <section class="gallery fade-in">
+    <h2>Our Work</h2>
+    <p>Explore some of our commercial HVAC and plumbing projects, showcasing our expertise in delivering high-quality solutions for businesses, schools, and facilities.</p>
+    <div class="gallery">
+      <figure>
+        <img src="images/rooftop-units-on-roof.jpg" alt="Commercial rooftop HVAC units" loading="lazy">
+        <figcaption>Rooftop HVAC Units</figcaption>
+      </figure>
+      <figure>
+        <img src="images/chillers-in-mechanical-room.jpg" alt="Commercial chillers in a mechanical room" loading="lazy">
+        <figcaption>Chillers in Mechanical Room</figcaption>
+      </figure>
+      <figure>
+        <img src="images/medgas-lines-and-gauges.jpg" alt="Commercial medical gas lines and gauges" loading="lazy">
+        <figcaption>Medical Gas Lines and Gauges</figcaption>
+      </figure>
+      <figure>
+        <img src="images/mini-split-condenser-alongside-larger-condenser.jpg" alt="Mini split condenser alongside a larger condenser" loading="lazy">
+        <figcaption>Mini Split and Large Condenser</figcaption>
+      </figure>
+      <figure>
+        <img src="images/two-air-cooled-chillers-outside-high-rise.jpg" alt="Air-cooled chillers outside a high-rise building" loading="lazy">
+        <figcaption>Air-Cooled Chillers at High-Rise</figcaption>
+      </figure>
+      <figure>
+        <img src="images/three-water-heaters.jpg" alt="Commercial water heaters" loading="lazy">
+        <figcaption>Commercial Water Heaters</figcaption>
+      </figure>
+      <figure>
+        <img src="images/two-boilers-in-mechanical-room.jpg" alt="Commercial boilers in a mechanical room" loading="lazy">
+        <figcaption>Boilers in Mechanical Room</figcaption>
+      </figure>
+    </div>
   </section>
 
+  <!-- Contact Section -->
+  <section class="contact-form fade-in">
+    <h2>Contact Me</h2>
+    <p>Ready to get your commercial HVAC or plumbing systems running smoothly? Reach out today!</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Call to Action -->
+  <div class="contact-cta fade-in">
+    <button onclick="window.scrollTo({top: document.querySelector('.contact-form').offsetTop, behavior: 'smooth'})">
+      Get a Free Consultation
+    </button>
+  </div>
+
   <!-- Footer -->
-   <footer>
-    <p>&copy; 2024 Mechanical Room Services by Omar</p>
+  <footer>
+    <p>&copy; 2025 HVAC and Plumbing Services by Omar. All rights reserved.</p>
   </footer>
 </body>
-
 </html>
