@@ -1,94 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Services - Mechanical Room Services by Omar</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="About Omar Payan — Light commercial HVAC and plumbing service sales in Central Texas. Trusted support for preventative maintenance, repairs, and replacements." />
+  <meta name="keywords" content="about, Omar Payan, HVAC, plumbing, Central Texas, service sales" />
+  <title>About — HVAC & Plumbing | Omar Payan</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
+    body { font-family: 'Inter', sans-serif; line-height: 1.7; color: #0f172a; }
+
+    /* Header */
     header {
-      background: url('https://source.unsplash.com/1600x900/?industrial,boiler') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 4rem 1rem;
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('images/rooftop-units-on-roof.jpg') center/cover no-repeat;
+      color: #fff; text-align: center; padding: 6rem 1rem; min-height: 50vh;
+      display: flex; flex-direction: column; justify-content: center;
     }
-    header h1 {
-      font-size: 3rem;
-      text-shadow: 2px 2px 5px black;
-    }
-    nav {
-      background-color: #001f3f;
-      color: white;
-      padding: 1rem;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 0 1rem;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    footer {
-      background: #001f3f;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-      border-radius: 8px;
+    header h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 2px 2px 8px rgba(0,0,0,.8); color: #fff; }
+    header p { font-size: 1.1rem; color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,.7); }
+
+    /* Nav */
+    nav { background-color: #001f3f; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 4px rgba(0,0,0,.1); }
+    nav ul { display: flex; justify-content: center; list-style: none; padding: 1rem 0; margin: 0; }
+    nav li { margin: 0 1.5rem; }
+    nav a { color: #fff; text-decoration: none; font-weight: 600; transition: color .3s ease; }
+    nav a:hover, nav a[aria-current="page"] { color: #60a5fa; }
+
+    /* Sections */
+    section { max-width: 950px; margin: 2rem auto; padding: 2rem; }
+    section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
+    section p { margin-bottom: 1rem; }
+
+    /* Bullets + sub-bullets */
+    ul { margin: 1rem 0 1rem 1.5rem; }
+    ul li { margin-bottom: .5rem; }
+    ul ul { margin-top: .5rem; margin-left: 1.5rem; list-style-type: circle; }
+    ul ul li { margin-bottom: .3rem; }
+
+    /* Profile / headshot */
+    .profile { display: grid; grid-template-columns: 160px 1fr; gap: 1.25rem; align-items: center; }
+    .headshot { width: 160px; height: 160px; border-radius: 9999px; object-fit: cover; border: 3px solid #e2e8f0; box-shadow: 0 4px 8px rgba(0,0,0,.12); background: #fff; }
+    .profile h3 { font-size: 1.35rem; font-weight: 700; margin: 0 0 .5rem; }
+
+    /* Cards */
+    .card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+    .card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: .75rem; }
+
+    /* Contact form */
+    .contact-form { background-color: #f9fafb; padding: 2rem; border-radius: .5rem; box-shadow: 0 4px 6px rgba(0,0,0,.1); margin-top: 2rem; }
+    .contact-form h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
+    .contact-form input, .contact-form textarea { width: 100%; margin-bottom: 1rem; border-radius: .25rem; }
+
+    /* Footer */
+    footer { background: #001f3f; color: #fff; text-align: center; padding: 2rem; margin-top: 2rem; }
+    footer p { color: #fff; margin: .5rem 0; }
+
+    /* Small screens */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      nav ul { flex-direction: column; text-align: center; }
+      nav li { margin: .5rem 0; }
+      .profile { grid-template-columns: 1fr; text-align: center; }
+      .profile .headshot { margin: 0 auto; }
     }
   </style>
 </head>
-
 <body>
   <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
       <li><a href="services.html">Services</a></li>
     </ul>
   </nav>
 
   <!-- Header -->
   <header>
-    <h1>About Me</h1>
-    <p>Committed to Reliable Boiler and Chiller Solutions</p>
+    <h1>About Omar Payan</h1>
+    <p>Light Commercial HVAC & Plumbing — Central Texas</p>
   </header>
 
-  <!-- About Section -->
+  <!-- Who I Am / Headshot -->
   <section>
-    <h2>My Journey</h2>
-    <p>I started my career in the U.S. Air Force, where I learned the discipline and precision needed for high-stakes technical work. After my military service, I spent over 12 years in the mechanical industry, specializing in boiler and chiller systems for businesses, schools, and facilities. My work has taken me across Central Texas, tackling challenges ranging from emergency repairs to designing state-of-the-art mechanical rooms.</p>
-    <p>I’m passionate about solving problems and creating systems that my clients can rely on. Whether it’s troubleshooting a failing boiler, optimizing chiller performance, or implementing energy-efficient solutions, I bring a detail-oriented approach to every project.</p>
-    <img src="https://source.unsplash.com/1200x800/?technician" alt="Technician at work">
-    <h2>Why Choose Me?</h2>
-    <ul>
-      <li>Over a decade of hands-on experience in boilers and chillers.</li>
-      <li>Proven track record of delivering reliable and efficient solutions.</li>
-      <li>Dedication to customer satisfaction and long-term results.</li>
-    </ul>
+    <h2><strong>Who I Am</strong></h2>
+
+    <div class="profile card">
+      <img src="images/omar-headshot.jpg" alt="Headshot of Omar Payan" class="headshot" />
+      <div>
+        <h3>Service Sales with a Facilities Mindset</h3>
+        <p>Based in Central Texas, the focus is on helping schools, military facilities, healthcare, worship, multifamily, and commercial offices get dependable HVAC and plumbing outcomes without the runaround. Experience spans 12+ years in service companies across San Antonio, Austin, and the I-35 corridor. Prior service as a U.S. Air Force Staff Sergeant shaped the approach: straight talk, clear plans, and follow-through.</p>
+        <p>Customers count on streamlined coordination—preventative maintenance first, fast repair response when needed, and well-managed replacements that respect schedules, budgets, and site rules.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Customers Are Supported -->
+  <section>
+    <h2><strong>How Customers Are Supported</strong></h2>
+
+    <div class="card">
+      <ul>
+        <li><strong>Preventative Maintenance First</strong>
+          <ul>
+            <li>Programs coordinated around bell schedules, services, and patient/resident needs.</li>
+            <li>Documented readings and clear checklists for confident decisions.</li>
+          </ul>
+        </li>
+        <li><strong>Repairs When You Need Them</strong>
+          <ul>
+            <li>Issues triaged quickly and routed to the right technicians with the right parts.</li>
+            <li>Communication stays tight: scope, pricing, schedule, and close-out.</li>
+          </ul>
+        </li>
+        <li><strong>Replacements Managed End-to-End</strong>
+          <ul>
+            <li>From equipment selection to crane day, controls, and commissioning—details handled start to finish.</li>
+            <li>Where practical, existing components reused to control cost without sacrificing reliability.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- What I Work On -->
+  <section>
+    <h2><strong>What I Work On</strong></h2>
+
+    <div class="card">
+      <ul>
+        <li><strong>Rooftop Units (RTUs)</strong> — PM programs, repairs, replacements with controls integration.</li>
+        <li><strong>Commercial Water Heaters</strong> — maintenance, repair coordination, upgrades (pumps, neutralizers, venting).</li>
+        <li><strong>Plumbing & MedGas</strong> — preventative checks, emergency response, NFPA-aligned tie-ins with certified partners.</li>
+        <li><strong>Boilers</strong> — scheduled maintenance, repair coordination, modernized replacements for efficiency and redundancy.</li>
+        <li><strong>Chillers</strong> — seasonal PMs, diagnostics/repairs, replacement management for Texas heat.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Working Style & Values -->
+  <section>
+    <h2><strong>Working Style & Values</strong></h2>
+
+    <div class="card">
+      <ul>
+        <li><strong>Direct & Organized</strong> — scopes are clear, pricing is transparent, and timelines are realistic.</li>
+        <li><strong>Facility-First Scheduling</strong> — work is planned around instruction, services, and resident comfort.</li>
+        <li><strong>Safety & Compliance</strong> — attention to permits, lockout/tagout, hot work, medgas protocols, and site rules.</li>
+        <li><strong>Lifecycle Thinking</strong> — recommendations weigh total cost of ownership, not just today’s fix.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Process: From First Call to Close-Out -->
+  <section>
+    <h2><strong>Process — From First Call to Close-Out</strong></h2>
+
+    <div class="card">
+      <ul>
+        <li><strong>1) Listen & Walk the Site</strong> — understand goals, constraints, and comfort/hot water pain points.</li>
+        <li><strong>2) Document</strong> — collect model/serials, filters/belts, nameplate data, control integrations, and photos.</li>
+        <li><strong>3) Plan</strong> — outline PM cadence, repair path, or replacement options with pros/cons and lead times.</li>
+        <li><strong>4) Execute</strong> — coordinate techs, lifts, materials, access, and safety requirements.</li>
+        <li><strong>5) Verify</strong> — start-up, trend/measure, and provide a concise close-out with next steps.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Coverage & Availability -->
+  <section>
+    <h2><strong>Coverage & Availability</strong></h2>
+
+    <div class="card">
+      <p>Primary coverage includes San Antonio, New Braunfels, San Marcos, and Austin. Project coordination and PM programs are scheduled to minimize disruption. For urgent issues, response is prioritized based on system criticality and occupant impact.</p>
+      <ul>
+        <li><strong>Service Windows</strong> — standard business hours with after-hours coordination for mission-critical work.</li>
+        <li><strong>Site Access</strong> — insured crews, background checks as required, and clear JHAs for specialty tasks.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- What to Expect in a Proposal -->
+  <section>
+    <h2><strong>What to Expect in a Proposal</strong></h2>
+
+    <div class="card">
+      <ul>
+        <li><strong>Clear Scope & Pricing</strong> — no guesswork; line items reflect the plan discussed on site.</li>
+        <li><strong>Options</strong> — preventative maintenance, repair, and replacement paths shown side-by-side when helpful.</li>
+        <li><strong>Schedule</strong> — realistic dates, crane day planning (if applicable), and lead-time notes.</li>
+        <li><strong>Safety & Compliance</strong> — notes on permits, medgas inspections, or controls integration as needed.</li>
+        <li><strong>Close-Out</strong> — readings, photos, and recommendations for what’s next.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Get in Touch -->
+  <section class="contact-form">
+    <h2><strong>Get in Touch</strong></h2>
+    <p>Need help with preventative maintenance, repairs, or planning a replacement? Send a quick note below and support will be arranged promptly.</p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Tell me about your facility and equipment..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <!-- Footer -->
-   <footer>
-    <p>&copy; 2024 Mechanical Room Services by Omar</p>
+  <footer>
+    <p>&copy; 2025 HVAC & Plumbing Services by Omar. All rights reserved.</p>
+    <p><strong>Cell:</strong> <a href="tel:12108757276" style="color:#fff;">(210) 875-7276</a></p>
+    <p><strong>Email:</strong> <a href="mailto:omar.payan.tx@gmail.com" style="color:#fff;">omar.payan.tx@gmail.com</a></p>
   </footer>
 </body>
-
 </html>
